@@ -70,8 +70,8 @@ router.post("/login", async (req, res) => {
     // Cookie settings (important for deployment)
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false, // change to true in production (HTTPS)
-      sameSite: "lax"
+      secure: true, // change to true in production (HTTPS)
+      sameSite: "none"
     });
 
     // Remove password from response

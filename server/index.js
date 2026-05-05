@@ -16,7 +16,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",
+    "https://team-task-manager-jade-six.vercel.app/"
+  ],
   credentials: true
 }));
 
